@@ -1,0 +1,124 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-light-gray-background-headings-buttons);
+}
+
+main {
+  width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100%;
+}
+
+main h1 {
+  font-family: "Big Shoulders Display";
+  font-weight: 600;
+  font-size: 40px;
+  color: var(--Very-light-gray-background-headings-buttons);
+  margin: 30px 0;
+}
+
+main span {
+  font-family: "Lexend Deca";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--Transparent-white-paragraphs);
+  display: inline-block;
+}
+
+.sedan {
+  background-color: var(--Bright-orange);
+  padding: 45px;
+  border-radius: 15px 0 0 15px;
+}
+
+.sedan button {
+  color: var(--Bright-orange);
+}
+
+.suv {
+  background-color: var(--Dark-cyan);
+  padding: 45px;
+}
+
+.suv button {
+  color: var(--Dark-cyan);
+}
+
+.luxury {
+  background-color: var(--Very-dark-cyan);
+  padding: 45px;
+  border-radius: 0 15px 15px 0;
+}
+
+.luxury button {
+  color: var(--Very-dark-cyan);
+}
+
+main button:hover {
+  color: var(--Very-light-gray-background-headings-buttons);
+  background: none;
+  border: 2px solid var(--Very-light-gray-background-headings-buttons);
+}
+
+main button {
+  margin: 50px 0 0 0;
+  text-decoration: none;
+  border: none;
+  background-color: var(--Very-light-gray-background-headings-buttons);
+  padding: 12px 30px;
+  font-size: 15px;
+  font-family: "Lexend Deca";
+  font-weight: 400;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 13px;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    height: 100%;
+    margin: 50px 0;
+  }
+  main {
+    width: 350px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .sedan {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 10px 10px;
+  }
+}
